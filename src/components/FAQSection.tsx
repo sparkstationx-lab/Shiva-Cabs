@@ -10,18 +10,15 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-stone-50 border-t border-stone-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-16 bg-white border-t border-stone-200 scroll-mt-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
-        <div className="text-center mb-12">
-          <span className="text-xs font-bold tracking-wider uppercase text-amber-700 block mb-2">
-            Got Questions?
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 font-heading">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-stone-900">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-stone-600">
-            Clear answers about baggage, driver details, payment modes, and cancellations.
+          <p className="text-xs sm:text-sm text-stone-600 mt-1">
+            Common questions about bookings, fares, and cabs.
           </p>
         </div>
 
@@ -31,20 +28,20 @@ export const FAQSection: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-xl border border-stone-200 overflow-hidden transition-all shadow-xs"
+                className="bg-stone-50 rounded-xl border border-stone-200 overflow-hidden transition-all"
               >
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-heading font-semibold text-stone-900 text-sm hover:text-amber-700 transition-colors cursor-pointer"
+                  className="w-full text-left p-4 flex items-center justify-between gap-4 font-semibold text-stone-900 text-sm hover:text-amber-700 transition-colors cursor-pointer"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-stone-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-amber-600' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-stone-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-amber-600' : ''}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
-                    <p className="mt-2">{faq.a}</p>
+                  <div className="px-4 pb-4 pt-1 text-xs text-stone-600 leading-relaxed border-t border-stone-200/60">
+                    {faq.a}
                   </div>
                 )}
               </div>

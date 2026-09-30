@@ -8,9 +8,7 @@ import {
   Calendar, 
   Clock, 
   Car, 
-  User, 
-  Phone, 
-  ShieldCheck, 
+  Phone,
   Copy,
   Check
 } from 'lucide-react';
@@ -40,180 +38,115 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
   };
 
   const handleShareWhatsApp = () => {
-    const text = `Shiva Cabs Booking Confirmed!
-Booking ID: ${booking.bookingId}
+    const text = `Shiva Cabs Booking:
+ID: ${booking.bookingId}
 Vehicle: ${vehicle.name}
 Pickup: ${booking.pickupLocation}
 Drop: ${booking.dropLocation}
-Date & Time: ${booking.pickupDate} at ${booking.pickupTime}
-Total Fare: ₹${booking.finalFare}
-Helpline: ${CONTACT_INFO.primaryPhone}`;
-
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
+Date: ${booking.pickupDate} at ${booking.pickupTime}
+Fare: ₹${booking.finalFare}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/70 backdrop-blur-sm overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-stone-200 overflow-hidden my-8 animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/60 backdrop-blur-xs">
+      <div className="bg-white rounded-2xl max-w-md w-full shadow-xl border border-stone-200 overflow-hidden">
         
-        {/* Modal Header */}
-        <div className="bg-stone-900 text-white p-6 relative">
+        {/* Header */}
+        <div className="bg-stone-900 text-white p-5 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+            <h3 className="font-bold text-base font-heading">Booking Confirmed</h3>
+          </div>
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-1.5 rounded-lg text-stone-400 hover:text-white hover:bg-stone-800 transition-colors cursor-pointer"
-            aria-label="Close modal"
+            className="p-1 rounded-lg text-stone-400 hover:text-white transition-colors cursor-pointer"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
-
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center">
-              <CheckCircle2 className="w-6 h-6 text-emerald-400" />
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-wider font-bold text-amber-400">
-                Booking Confirmed
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold font-heading">
-                Thank You, {booking.customerName}!
-              </h3>
-            </div>
-          </div>
         </div>
 
-        {/* Modal Content / Printable Slip */}
-        <div className="p-6 space-y-5 print:p-0">
+        {/* Slip details */}
+        <div className="p-5 space-y-4 text-xs">
           
-          {/* Reference Banner */}
-          <div className="flex items-center justify-between p-3.5 bg-amber-50 rounded-xl border border-amber-200/80">
+          <div className="flex items-center justify-between p-3 bg-stone-50 rounded-xl border border-stone-200 font-mono">
             <div>
-              <span className="text-[11px] font-semibold text-stone-600 uppercase tracking-wider block">
-                Booking Reference Number
-              </span>
-              <span className="text-lg font-mono font-bold text-stone-900">
-                {booking.bookingId}
-              </span>
+              <span className="text-[10px] text-stone-500 uppercase block">Booking ID</span>
+              <span className="text-sm font-bold text-stone-900">{booking.bookingId}</span>
             </div>
             <button
               onClick={handleCopyId}
-              className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-stone-700 hover:bg-amber-100 transition-colors cursor-pointer"
+              className="flex items-center gap-1 text-[11px] font-semibold px-2 py-1 bg-white border border-stone-300 rounded text-stone-700 hover:bg-stone-100 cursor-pointer"
             >
-              {copied ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Copied</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5 text-stone-500" />
-                  <span>Copy ID</span>
-                </>
-              )}
+              {copied ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
+              <span>{copied ? 'Copied' : 'Copy'}</span>
             </button>
           </div>
 
-          {/* Itinerary Details */}
-          <div className="space-y-3 text-sm border-t border-b border-stone-200 py-4">
-            
-            <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="space-y-2 border-y border-stone-100 py-3">
+            <div className="flex items-start gap-2">
+              <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0 mt-0.5" />
               <div>
-                <span className="text-xs font-semibold text-stone-500 uppercase block">Pickup Location</span>
+                <span className="text-stone-500 block text-[10px]">Pickup</span>
                 <span className="font-medium text-stone-900">{booking.pickupLocation}</span>
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2">
+              <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0 mt-0.5" />
               <div>
-                <span className="text-xs font-semibold text-stone-500 uppercase block">Drop-Off Destination</span>
+                <span className="text-stone-500 block text-[10px]">Drop</span>
                 <span className="font-medium text-stone-900">{booking.dropLocation}</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-1">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-stone-400" />
-                <div>
-                  <span className="text-xs text-stone-500 block">Date</span>
-                  <span className="font-medium text-stone-900">{booking.pickupDate}</span>
-                </div>
+            <div className="grid grid-cols-2 gap-2 pt-1">
+              <div>
+                <span className="text-stone-500 block text-[10px]">Date & Time</span>
+                <span className="font-medium text-stone-900">{booking.pickupDate} {booking.pickupTime}</span>
               </div>
-
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-stone-400" />
-                <div>
-                  <span className="text-xs text-stone-500 block">Scheduled Time</span>
-                  <span className="font-medium text-stone-900">{booking.pickupTime}</span>
-                </div>
+              <div>
+                <span className="text-stone-500 block text-[10px]">Vehicle</span>
+                <span className="font-medium text-stone-900">{vehicle.name}</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-1">
-              <div className="flex items-center gap-2">
-                <Car className="w-4 h-4 text-stone-400" />
-                <div>
-                  <span className="text-xs text-stone-500 block">Cab Category</span>
-                  <span className="font-medium text-stone-900">{vehicle.name}</span>
-                </div>
+            <div className="grid grid-cols-2 gap-2 pt-1">
+              <div>
+                <span className="text-stone-500 block text-[10px]">Passenger</span>
+                <span className="font-medium text-stone-900">{booking.customerName}</span>
               </div>
-
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-stone-400" />
-                <div>
-                  <span className="text-xs text-stone-500 block">Contact Phone</span>
-                  <span className="font-medium text-stone-900 font-mono">{booking.customerPhone}</span>
-                </div>
+              <div>
+                <span className="text-stone-500 block text-[10px]">Total Fare</span>
+                <span className="font-bold text-stone-950 text-sm font-mono">₹{booking.finalFare}</span>
               </div>
-            </div>
-
-          </div>
-
-          {/* Fare Summary */}
-          <div className="flex items-center justify-between px-2">
-            <div>
-              <span className="text-xs text-stone-500 block">Trip Type: {booking.tripType.toUpperCase()}</span>
-              <span className="text-xs text-stone-500">Pay direct to driver via Cash or UPI</span>
-            </div>
-            <div className="text-right">
-              <span className="text-xs uppercase tracking-wider font-semibold text-stone-500 block">Total Fare</span>
-              <span className="text-2xl font-bold font-mono text-stone-950">₹{booking.finalFare}</span>
             </div>
           </div>
 
-          {/* Dispatch Notice Box */}
-          <div className="p-3.5 bg-stone-50 rounded-xl border border-stone-200 text-xs text-stone-600 flex items-start gap-2.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <div>
-              <span className="font-semibold text-stone-900 block mb-0.5">What happens next?</span>
-              Driver details (Chauffeur Name, Mobile, and Cab Plate Number) will be automatically sent to <strong className="font-mono">{booking.customerPhone}</strong> approximately 30 minutes before your pickup.
-            </div>
-          </div>
+          <p className="text-[11px] text-stone-500 text-center">
+            Driver & cab details will be sent via SMS before pickup.
+          </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-2 print:hidden">
+          <div className="flex items-center gap-2 pt-1">
             <button
               onClick={handleShareWhatsApp}
-              className="w-full sm:flex-1 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer"
+              className="flex-1 py-2 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Share on WhatsApp</span>
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>WhatsApp</span>
             </button>
-
             <button
               onClick={handlePrint}
-              className="w-full sm:w-auto py-2.5 px-4 bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer border border-stone-300"
+              className="py-2 px-3 bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold rounded-lg flex items-center justify-center gap-1.5 border border-stone-300 cursor-pointer"
             >
-              <Printer className="w-4 h-4" />
-              <span>Print Slip</span>
+              <Printer className="w-3.5 h-3.5" />
+              <span>Print</span>
             </button>
-
             <button
               onClick={onClose}
-              className="w-full sm:w-auto py-2.5 px-4 bg-stone-900 hover:bg-stone-800 text-white font-semibold text-xs rounded-xl transition-colors cursor-pointer"
+              className="py-2 px-4 bg-stone-900 text-white font-semibold rounded-lg cursor-pointer"
             >
-              Done
+              Close
             </button>
           </div>
 
