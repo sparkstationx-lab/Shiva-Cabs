@@ -1,0 +1,6 @@
+{
+  "name": "Shiva Cabs",
+  "description": "Premium and reliable cab booking service for city travel, airport transfers, and outstation trips with instant fare estimates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
