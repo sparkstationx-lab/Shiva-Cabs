@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { CONTACT_INFO } from '../data/cabData';
+import { CONTACT_INFO, SHIVA_LOGO } from '../data/cabData';
 
 export const Navbar: React.FC = () => {
   return (
@@ -8,10 +8,16 @@ export const Navbar: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         
         {/* Brand */}
-        <a href="#" className="text-xl font-bold tracking-tight text-white font-heading flex items-center gap-2">
-          <span className="w-7 h-7 rounded-md bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center">
-            S
-          </span>
+        <a href="#" className="text-xl font-bold tracking-tight text-white font-heading flex items-center gap-2.5">
+          <img 
+            src={SHIVA_LOGO} 
+            alt="Shiva Cabs Logo" 
+            className="h-9 w-auto max-w-[120px] object-contain rounded-md bg-stone-950/40 p-0.5"
+            onError={(e) => {
+              // Graceful fallback if not loaded
+              (e.currentTarget as HTMLElement).style.display = 'none';
+            }}
+          />
           <span>Shiva Cabs</span>
         </a>
 

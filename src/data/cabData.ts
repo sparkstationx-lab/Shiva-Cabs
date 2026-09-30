@@ -5,8 +5,10 @@ import heroCabImg from '../assets/images/hero_shiva_cabs_1790779191686.jpg';
 import fleetSedanImg from '../assets/images/fleet_sedan_car_1790779207882.jpg';
 import fleetSuvImg from '../assets/images/fleet_innova_suv_1790779219742.jpg';
 import fleetLuxuryImg from '../assets/images/fleet_luxury_sedan_1790779233106.jpg';
+import shivaLogoImg from '../assets/images/logoshiva.png';
 
 export const HERO_IMAGE = heroCabImg;
+export const SHIVA_LOGO = shivaLogoImg;
 
 export const VEHICLE_OPTIONS: VehicleOption[] = [
   {
