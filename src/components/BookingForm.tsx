@@ -104,7 +104,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onBookingSuccess }) =>
 
   const handleWhatsApp = () => {
     if (!validate()) return;
-    const msg = `*Shiva Cabs Booking*
+    const msg = `*Shivaye Cabs Booking*
 Pickup: ${pickupLocation}
 Drop: ${dropLocation}
 Date: ${pickupDate} at ${pickupTime}

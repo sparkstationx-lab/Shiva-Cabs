@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               <span className="w-7 h-7 rounded-md bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center">
                 S
               </span>
-              <span>Shiva Cabs</span>
+              <span>Shivaye Cabs</span>
             </a>
             <p className="text-stone-400 text-xs leading-relaxed">
               Premium, dependable car rental and taxi services. Connecting airports, city centers, and outstation destinations with verified chauffeurs.
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
         {/* Quiet Sub-footer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
           <div>
-            © {new Date().getFullYear()} Shiva Cabs Mobility Services. All rights reserved.
+            © {new Date().getFullYear()} Shivaye Cabs Mobility Services. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">

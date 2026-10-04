@@ -8,7 +8,7 @@ export const AboutSection: React.FC = () => {
         
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-stone-900">
-            About Shiva Cabs
+            About Shivaye Cabs
           </h2>
           <p className="text-sm text-stone-600 mt-2 max-w-xl mx-auto">
             We provide prompt, dependable, and affordable taxi services for local travel, airport pickups, and outstation journeys.

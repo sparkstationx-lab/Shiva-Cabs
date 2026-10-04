@@ -38,7 +38,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
   };
 
   const handleShareWhatsApp = () => {
-    const text = `Shiva Cabs Booking:
+    const text = `Shivaye Cabs Booking:
 ID: ${booking.bookingId}
 Vehicle: ${vehicle.name}
 Pickup: ${booking.pickupLocation}
