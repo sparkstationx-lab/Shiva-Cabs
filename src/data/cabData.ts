@@ -148,15 +148,15 @@ export const LOCATION_SUGGESTIONS = [
 ];
 
 export const CONTACT_INFO = {
-  brandName: 'Shivaye Cabs',
+  brandName: 'Shivay Cabs',
   tagline: 'Reliable Journeys, Transparent Pricing',
   primaryPhone: '+91 98765 43210',
   secondaryPhone: '+91 98765 43211',
   tollFree: '1800-200-7448',
   whatsappNumber: '+91 98765 43210',
   cleanPhone: '919876543210',
-  email: 'bookings@shivayecabs.com',
-  supportEmail: 'support@shivayecabs.com',
+  email: 'bookings@shivaycabs.com',
+  supportEmail: 'support@shivaycabs.com',
   address: {
     street: 'Plot 42, Airport Gateway Commercial Complex',
     area: 'Terminal Road, Sector 18',
@@ -173,7 +173,7 @@ export const TESTIMONIALS = [
     role: 'Frequent Business Traveler',
     company: 'Fintech Solutions Ltd.',
     trip: 'Airport Pickup & Drop',
-    comment: 'Booked Shivaye Cabs for 4 am airport transfers multiple times. Driver arrives 10 minutes early, cab is spotless, and billing is completely straightforward with no surprise surge fares.',
+    comment: 'Booked Shivay Cabs for 4 am airport transfers multiple times. Driver arrives 10 minutes early, cab is spotless, and billing is completely straightforward with no surprise surge fares.',
     rating: 5
   },
   {
@@ -181,7 +181,7 @@ export const TESTIMONIALS = [
     role: 'Family Outstation Trip',
     company: 'Bangalore Resident',
     trip: 'Round-trip to Coorg (Innova Crysta)',
-    comment: 'The Innova provided by Shivaye Cabs was immaculate. Our driver, Ramesh, was extremely courteous and drove carefully on winding mountain roads. Highly recommended for family vacations!',
+    comment: 'The Innova provided by Shivay Cabs was immaculate. Our driver, Ramesh, was extremely courteous and drove carefully on winding mountain roads. Highly recommended for family vacations!',
     rating: 5
   },
   {
@@ -189,7 +189,7 @@ export const TESTIMONIALS = [
     role: 'Corporate Fleet Coordinator',
     company: 'Apex Technologies',
     trip: 'Corporate Event Fleet',
-    comment: 'We relied on Shivaye Cabs for our 3-day annual investor summit. 12 cabs synchronized seamlessly. Instant receipts, polite chauffeurs, and outstanding dispatch coordination.',
+    comment: 'We relied on Shivay Cabs for our 3-day annual investor summit. 12 cabs synchronized seamlessly. Instant receipts, polite chauffeurs, and outstanding dispatch coordination.',
     rating: 5
   }
 ];
@@ -208,7 +208,7 @@ export const FAQS = [
     a: 'You can cancel or reschedule your ride free of charge up to 2 hours before the scheduled pickup time. We do not charge cancellation penalties for flights delayed by airlines.'
   },
   {
-    q: 'Are Shivaye Cabs sanitized and GPS enabled?',
+    q: 'Are Shivay Cabs sanitized and GPS enabled?',
     a: 'Yes, 100% of our fleet is equipped with live GPS tracking and emergency panic assistance. Every vehicle undergoes interior cleaning and sanitization after each scheduled trip.'
   },
   {

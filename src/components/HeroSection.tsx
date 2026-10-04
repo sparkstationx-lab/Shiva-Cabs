@@ -13,7 +13,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick, onContact
       <div className="absolute inset-0 z-0">
         <img
           src={HERO_IMAGE}
-          alt="Shivaye Cabs chauffeur vehicle"
+          alt="Shivay Cabs chauffeur vehicle"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center"
         />
@@ -24,7 +24,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick, onContact
       <div className="relative z-10 max-w-3xl mx-auto px-4 py-16 text-white flex flex-col items-center">
         <img
           src={SHIVA_LOGO}
-          alt="Shivaye Cabs"
+          alt="Shivay Cabs"
           className="h-16 sm:h-20 w-auto object-contain mb-4 drop-shadow-md rounded-lg"
           onError={(e) => {
             (e.currentTarget as HTMLElement).style.display = 'none';
@@ -32,7 +32,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick, onContact
         />
 
         <h1 className="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight text-white mb-3">
-          Shivaye Cabs
+          Shivay Cabs
         </h1>
         
         <p className="text-base sm:text-xl text-stone-200 font-medium mb-8 max-w-xl">

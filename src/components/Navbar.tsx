@@ -11,14 +11,14 @@ export const Navbar: React.FC = () => {
         <a href="#" className="text-xl font-bold tracking-tight text-white font-heading flex items-center gap-2.5">
           <img 
             src={SHIVA_LOGO} 
-            alt="Shivaye Cabs Logo" 
+            alt="Shivay Cabs Logo" 
             className="h-9 w-auto max-w-[120px] object-contain rounded-md bg-stone-950/40 p-0.5"
             onError={(e) => {
               // Graceful fallback if not loaded
               (e.currentTarget as HTMLElement).style.display = 'none';
             }}
           />
-          <span>Shivaye Cabs</span>
+          <span>Shivay Cabs</span>
         </a>
 
         {/* Clean Nav Links */}

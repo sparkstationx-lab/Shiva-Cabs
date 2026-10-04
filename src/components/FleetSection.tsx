@@ -15,7 +15,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onSelectVehicle }) =
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs font-bold tracking-wider uppercase text-amber-700 block mb-2">
-            The Shivaye Cabs Fleet
+            The Shivay Cabs Fleet
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-heading">
             Pristine Vehicles for Every Journey & Group Size

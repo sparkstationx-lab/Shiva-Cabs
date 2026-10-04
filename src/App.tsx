@@ -63,7 +63,7 @@ export default function App() {
       {/* Simple Footer */}
       <footer className="bg-stone-900 text-stone-400 py-6 border-t border-stone-800 text-xs text-center">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div>© {new Date().getFullYear()} Shivaye Cabs. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Shivay Cabs. All rights reserved.</div>
           <div className="font-mono text-stone-300">24/7 Helpline: {CONTACT_INFO.primaryPhone}</div>
         </div>
       </footer>
